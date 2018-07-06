@@ -13,6 +13,7 @@ const styles = theme => ({
     padding: "1em 50px",
     alignItems: "center",
     width: "100%",
+    margin: "0 auto",
     color: theme.footer.colors.text,
     fontSize: ".85em",
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
@@ -35,6 +36,24 @@ const styles = theme => ({
       }
     }
   },
+  texts: {
+    fontSize: "1em",
+    textAlign: "center",
+    padding: "3em 2em 0 2em",
+    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
+      padding: "4em 15% 0"
+    },
+    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+      overflowY: "auto",
+      width: "60%",
+      paddingLeft: "10%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      padding: "2em",
+      textAlign: "left"
+    }
+  },  
   column: {
     textAlign: "center",
     padding: ".2em 0",
@@ -87,13 +106,11 @@ const Footer = ({ classes, data }) => {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.column}>
-        Contact: <Obfuscate email={config.contactEmail} />
+      <div className={classes.texts}>
+        <p>팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진</p>
+        <p>경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)</p>
+        <p>문의 : <a href="mailto: admin@teamquick.app">admin@teamquick.app</a></p>
       </div>
-      <div
-        className={`${classes.column} ${classes.links}`}
-        dangerouslySetInnerHTML={{ __html: links }}
-      />
     </footer>
   );
 };

@@ -20,7 +20,7 @@ const SEO = () => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:type" content="website" />
-      <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ""} />
+      {/* <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ""} /> */}
     </Helmet>
   );
 };

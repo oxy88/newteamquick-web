@@ -2,6 +2,6 @@
 title: billboard
 ---
 
-# This is a demo page of the _SimpleLanding_ GatsbyJS starter.
+# 팀이 필요할 땐 _TeamQuick_
 
-## It's an optimized, ready to use theme-starter. Just add your content.
+## 팀 찾기, 팀원 찾기

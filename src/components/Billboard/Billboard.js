@@ -8,6 +8,7 @@ import config from "../../utils/config";
 import SvgEl from "../shared/SvgEl";
 import LOGOS from "../../images/logos";
 import DemoLink from "./DemoLink";
+import IosLink from "./IosLink";
 
 function handleMouseClick() {
   if (typeof ga === `function`) {
@@ -28,7 +29,8 @@ const styles = theme => ({
   container: {
     width: "100%",
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      height: `calc(100vh - ${theme.footer.sizes.height})`,
+      // height: `calc(100vh - ${theme.footer.sizes.height})`,
+      height: `calc(100vh)`,
       display: "flex",
       flexDirection: "row",
       alignItems: "stretch"
@@ -205,7 +207,8 @@ const styles = theme => ({
       display: "none"
     },
     "& button": {
-      display: "inline-block"
+      display: "block",
+      margin: "0 auto"
     }
   }
 });
@@ -284,6 +287,22 @@ class Billboard extends React.Component {
     ).node.resolutions[`${srcType}${fileType}`];
   }
 
+  getMobileOS() {
+    if (typeof window === 'undefined') return 'undefined'
+
+    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera
+
+    if (/android/i.test(userAgent)) {
+      return "Android"
+    }
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS"
+    }
+
+    return "unknown"
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -293,15 +312,20 @@ class Billboard extends React.Component {
 
     const { phoneInPerspectiveVisible, initialView } = this.state;
 
+    const os = this.getMobileOS()
+
     return (
       <article className={classes.container}>
         <section className={classes.texts}>
-          <span className={classes.logo}>
+          {/* <span className={classes.logo}>
             <SvgEl svg={LOGOS.MAIN} />
-          </span>
+          </span> */}
           <header className={classes.header} dangerouslySetInnerHTML={{ __html: headings }} />
           <div className={classes.actionForDesktop}>
             <DemoLink onClick={handleMouseClick} />
+            <div style={{marginTop: '16px'}}>
+            <IosLink onClick={handleMouseClick} />
+            </div>
           </div>
         </section>
         <section
@@ -441,7 +465,8 @@ class Billboard extends React.Component {
           </picture>
         </section>
         <section className={classes.actionForMobile}>
-          <DemoLink onClick={handleMouseClick} />
+            {os === "Android" ? <DemoLink onClick={handleMouseClick} /> : 
+          (os === "iOS" ? <IosLink onClick={handleMouseClick} /> : null)}                        
         </section>
       </article>
     );

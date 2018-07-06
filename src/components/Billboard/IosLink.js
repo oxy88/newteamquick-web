@@ -19,12 +19,11 @@ const styles = theme => ({
     color: "white",
     fontWeight: 300,
     fontFamily: "inherit",
-    height: "60px",
     width: "250px",
+    height: "60px",
     lineHeight: 1,
     textTransform: "none",
-    // padding: ".5em 2em",
-    padding: "0",
+    padding: ".5em 2em",
     "&:hover": {
       background: Color(theme.billboard.colors.ctaLinkBackground)
         .lighten(0.2)
@@ -41,18 +40,18 @@ const styles = theme => ({
   }
 });
 
-const DemoLink = props => {
+const IosLink = props => {
   const { classes, onClick } = props;
   return (
     <Button onClick={onClick} classes={{ root: classes.root, label: classes.label }}>
-      <img src={withPrefix('images/icon_google.png')} style={{margin: "auto"}}/>Google Play
+      <img src={withPrefix('images/icon_apple.png')} /> App Store
     </Button>
   );
 };
 
-DemoLink.propTypes = {
+IosLink.propTypes = {
   classes: PropTypes.object.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(DemoLink);
+export default withStyles(styles)(IosLink);

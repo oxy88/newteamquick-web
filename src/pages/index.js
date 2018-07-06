@@ -10,7 +10,7 @@ const styles = theme => ({
   main: {
     width: "100%",
     minHeight: "100vh",
-    position: "relative"
+    position: "relative",
   },
   bg: {
     position: "absolute",
