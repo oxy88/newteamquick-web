@@ -27,6 +27,7 @@ function handleMouseClick() {
 
 const styles = theme => ({
   container: {
+    backgroundColor: '#ffffff',
     width: "100%",
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       // height: `calc(100vh - ${theme.footer.sizes.height})`,

@@ -44,7 +44,7 @@ const theme = createMuiTheme({
       linkHover: colors.gray
     },
     sizes: {
-      height: "50px"
+      height: "150px"
     }
   },
   mediaQueryTresholds: {

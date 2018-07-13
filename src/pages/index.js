@@ -52,6 +52,9 @@ class Index extends React.Component {
           </picture>
         </div>
         <Billboard data={this.props.data} />
+        <Billboard data={this.props.data} />
+        <Billboard data={this.props.data} />
+        <Billboard data={this.props.data} />
         <Footer data={this.props.data} />
       </main>
     );
