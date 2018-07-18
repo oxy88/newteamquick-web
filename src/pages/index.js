@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import Billboard from "../components/Billboard/";
 import Footer from "../components/Footer/";
+import Main from '../components/Billboard/Main'
 
 // eslint-disable-next-line no-unused-vars
 const styles = theme => ({
@@ -33,7 +34,7 @@ class Index extends React.Component {
 
     return (
       <main className={classes.main}>
-        <div className={classes.bg}>
+        {/* <div className={classes.bg}>
           <picture>
             <source
               type="image/webp"
@@ -50,12 +51,13 @@ class Index extends React.Component {
             <source type="image/webp" srcSet={data.background500Webp.resize.src} />
             <img src={data.background500.resize.src} alt="" />
           </picture>
-        </div>
+        </div> */}
+        <Main data={this.props.data} />      
+        {/* <Billboard data={this.props.data} />
         <Billboard data={this.props.data} />
         <Billboard data={this.props.data} />
         <Billboard data={this.props.data} />
-        <Billboard data={this.props.data} />
-        <Footer data={this.props.data} />
+        <Footer data={this.props.data} /> */}
       </main>
     );
   }

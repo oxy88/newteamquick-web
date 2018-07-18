@@ -20,8 +20,6 @@ const theme = createMuiTheme({
   },
   billboard: {
     colors: {
-      text: colors.dark,
-      textAccent: colors.accent,
       ctaLinkBackground: colors.accent,
       logo: colors.bright
     },

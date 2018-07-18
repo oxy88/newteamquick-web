@@ -339,18 +339,16 @@ export default {
       boxSizing: "inherit"
     },
     body: {
-      margin: 0
+      margin: 0,
+      lineHeight: 1.5
+    },
+    ul: {
+      listStyle: 'none'
     },
     a: {
       background: "transparent",
       textDecorationSkip: "objects",
-      fontWeight: "bold",
-      textShadow: `2px 2px ${theme.main.colors.background},
-        -2px 2px ${theme.main.colors.background},
-        -2px -2px ${theme.main.colors.background},
-        -2px 2px ${theme.main.colors.background},
-        -2px 0 ${theme.main.colors.background},
-        2px 0 ${theme.main.colors.background}`,
+      color: "#ffffff",
       display: "inline-block",
       lineHeight: "1.1",
       textDecoration: "none",
