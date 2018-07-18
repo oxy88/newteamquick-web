@@ -1,5 +1,6 @@
 import React from 'react'
 import injectSheet from "react-jss";
+import Link from 'gatsby-link'
 
 const borderWeb = 991
 const borderSmallMobile = 364
@@ -336,6 +337,7 @@ const styles = theme => ({
     height:"240px",
     padding:"120px 0 0 0",
     textAlign: "center",
+    paddingBottom: "250px",
     [`@media (min-width: ${borderWeb}px)`]: {
       "padding": "60px 0 0 0",
     },
@@ -575,6 +577,7 @@ class Main extends React.Component {
 			<div className={classes.footer__top_area__sitemap_box}>
 				<span className={classes.footer__title + " " + classes.footer_a}>안내</span>
 				<ul>
+          <li><Link to="/recruit/" className={classes.footer_a} style={{color: "#ff0000"}}>채용</Link></li>
 					<li><a className={classes.footer_a} href="#">공지사항</a></li>
 					<li><a className={classes.footer_a} href="#">자주 묻는 질문</a></li>
 				</ul>
