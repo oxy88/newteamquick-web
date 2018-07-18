@@ -2,6 +2,7 @@ import React from 'react'
 import injectSheet from "react-jss";
 
 const borderWeb = 991
+const borderSmallMobile = 364
 
 const styles = theme => ({
   a: {
@@ -88,10 +89,13 @@ const styles = theme => ({
   "content": {
     "position": "relative",
     "width": "100%",
-    "maxHeight": "1030px",
     "margin": "0 auto",
-    "paddingLeft": "230px",
-     height:"1030px"
+    height: '100vh',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "maxHeight": "1030px",
+      "paddingLeft": "230px",
+      height:"1030px"
+    },
   },
   "container_page2": {
     "background": "#fff"
@@ -109,9 +113,10 @@ const styles = theme => ({
   "cover": {
     "height": "100%",
     "position": "relative",
-    backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
     "backgroundImage": "url(\"../img_m/common/bg_main01.jpg\")",
-    "backgroundSize": "auto",
+    backgroundPosition: "50vw 50vh",
+    backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
     "backgroundPosition": "center",
     [`@media (min-width: ${borderWeb}px)`]: {
@@ -120,7 +125,10 @@ const styles = theme => ({
     }
   },
   "cover__content": {
-    height: `calc(100vh)`,
+    height: 'calc(100vh)',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      height: `calc(100vh)`,
+      }
   },
   "logo": {
     "display": "none",
@@ -133,20 +141,21 @@ const styles = theme => ({
   "textbox": {
     "color": "#fff",
     "position": "absolute",
-    fontSize: 31,
+    fontSize: '24px',
     top:70,
-    left: "50%",
-    marginLeft: -169,
+    textAlign: "center",
+    width: "100vw",    
+    [`@media (min-width: ${borderSmallMobile}px)`]: {
+      fontSize: '31px',
+    },
     [`@media (min-width: ${borderWeb}px)`]: {
       left: 230,
       "fontSize": "35px",
       "top": "50%",
       marginTop: "-120px",
       "marginLeft": "60px",
+      textAlign: 'left',
     }
-  },
-  "text_area1": {
-    "marginBottom": "42px"
   },
   "btn_area_a": {
     display: 'none',
@@ -156,28 +165,45 @@ const styles = theme => ({
     },
   },
   btn_area_a_mobile: {
+    fontSize: "24px",
+    lineHeight: '2.0',
     position: 'absolute',
-    width:'346px',
+    left: 0,
+    right: 0,
+    top: `calc(100vh - 150px)`,
+    backgroundColor: '#497fff',
+    borderRadius: 10,
+    width: "100vw",
     height: '57px',
-    left:'50%',
-    top: `calc(80vh)`,
-    marginLeft:'-173px',
     [`@media (min-width: ${borderWeb}px)`]: {
       display: 'none'
     }
   },
   "page2__content": {
     height: `calc(100vh)`,
+    minHeight: '500px',
+    backgroundColor: '#fff',
   },
   "page3__content": {
     height: `calc(100vh)`,
+    minHeight: '500px',
+    backgroundColor: '#fafafa',
   },
   "textbox2": {
-    "fontSize": "50px",
-    "color": "#3b6cdf",
-    "position": "absolute",
-    "top": "25%",
-    "marginLeft": "60px"
+    textAlign: 'center',
+      width:"356px",
+      fontSize:"36px",
+      color:"#3b6cdf",
+      margin:"0 auto 47px",
+      paddingTop:"47px",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      textAlign: "left",
+      "fontSize": "50px",
+      "color": "#3b6cdf",
+      "position": "absolute",
+      "top": "25%",
+      "marginLeft": "60px"
+    },
   },
   "textbox2__text_area": {
     "marginBottom": "45px",
@@ -214,9 +240,13 @@ const styles = theme => ({
     "borderBottom": "2px solid #3b6cdf"
   },
   "right_img": {
-    "position": "absolute",
-    "top": "175px",
-    "right": "20px"
+    display: 'none',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: 'block',
+      "position": "absolute",
+      "top": "175px",
+      "right": "20px"
+    }    
   },
   "page4__content": {
     "height": "155px",
@@ -237,27 +267,50 @@ const styles = theme => ({
     "paddingLeft": "130px"
   },
   "footer": {
-    "height": "505px",
+    position: 'relative',
     "background": "#3a3d41",
     "fontSize": "14px",
-    "color": "#a8a9aa"
+    "color": "#a8a9aa",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "height": "505px",
+    }
   },
   "footer__top_area": {
+    width: "100vw",
+    paddingTop:'42px',
     "position": "relative",
-    "width": "1000px",
-    "left": "50%",
-    "marginLeft": "-426px",
-    "height": "200px",
-    "paddingTop": "71px"
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "width": "1000px",
+      "left": "50%",
+      "marginLeft": "-426px",
+      "height": "200px",
+      "paddingTop": "71px",
+    }
   },
   "footer__top_area__sitemap_box": {
-    "float": "left",
-    "marginRight": "104px"
+    display: 'block',
+    float: 'left',
+    width: "50%",
+    margin: '0 auto',
+    paddingLeft: 20,
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "float": "left",
+      "marginRight": "104px",
+      width: 'auto',
+      margin: 'auto',
+      paddingLeft: 0,      
+    },
   },
   "footer_a": {
-    "fontSize": "14px",
+    fontSize: "14px",  
     "color": "#a8a9aa",
-    "letterSpacing": "0px"
+    "letterSpacing": "0px",
+    [`@media (min-width: ${borderSmallMobile}px)`]: {
+      "fontSize": "22px",
+    },
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "fontSize": "14px",
+    },    
   },
   "footer__title": {
     "display": "block",
@@ -265,27 +318,30 @@ const styles = theme => ({
     "marginBottom": "20px"
   },
   "footer__top_area__sns_area": {
+    position: 'absolute',
+    right: 20,
+    top: 200,
+    [`@media (min-width: ${borderWeb}px)`]: {
       position:'absolute',
-      top:'520px',
-      right:'80px',
+      right:0,
       width:'120px',
-      height:'55px',
-      [`@media (min-width: ${borderWeb}px)`]: {
-        "position": "absolute",
-        "right": "0",
-        "width": "120px"
-      }
+    }
   },
   "footer__top_area__sns_area__btn_sns": {
     "float": "left",
     "marginLeft": "10px"
   },
   "footer__bottom_area": {
-    "height": "240px",
-    "padding": "60px 0 0 0",
-    "textAlign": "center"
+    clear:"both",
+    height:"240px",
+    padding:"120px 0 0 0",
+    textAlign: "center",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      "padding": "60px 0 0 0",
+    },
   },
   "footer__bottom_area__footer_text": {
+    backgroundColor: '#3a3d41',
     "marginTop": "21px",
     "letterSpacing": "0"
   },
@@ -293,7 +349,44 @@ const styles = theme => ({
     textDecoration: "underline"
   },
   subCopy: {
-    fontSize: "24px"
+    display: 'none',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: 'block',
+      fontSize: "24px"
+    }
+  },
+  bottom_img1: {
+    position:'absolute',
+    bottom:'0',
+    width:'100vw',
+    height:'50vh',
+    backgroundImage: 'url("../img_m/main/img_main01.png")',
+    backgroundSize: 'cover',
+    backgroundPosition: '20px',
+    backgroundRepeat: 'no',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: 'none',
+    }
+  },
+  bottom_img2: {
+    position:'absolute',
+    bottom:'0',
+    width:'100vw',
+    height:'50vh',
+    backgroundImage: 'url("../img_m/main/img_main02.png")',
+    backgroundSize: 'cover',
+    backgroundPosition: '20px',
+    backgroundRepeat: 'no',
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: 'none',
+    }
+  },
+  text_area1: {
+    marginBottom: 42
+  },
+  myUl: {
+    display: 'flex',
+    justifyContent: 'center',
   }
 })
 
@@ -322,8 +415,35 @@ class Main extends React.Component {
 
   }
 
+  getMobileOS() {
+    if (typeof window === 'undefined') return 'undefined'
+
+    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera
+
+    if (/android/i.test(userAgent)) {
+      return "Android"
+    }
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS"
+    }
+
+    return "unknown"
+  }
+
   render() {
     const { classes } = this.props
+
+    const os = this.getMobileOS()
+    
+    let appDownLoadUrl = ""
+
+    if (os === 'android') {
+      appDownLoadUrl = "https://play.google.com/store/apps/details?id=com.teamquick8"
+    }
+    if (os === 'iOS') {
+      appDownLoadUrl = "https://itunes.apple.com/kr/app/teamquick-%ED%8C%80%ED%80%B5-%EB%A1%A4-%EB%93%80%EC%98%A4-%EA%B2%A9%EC%A0%84-%ED%8C%80-%EC%B0%BE%EA%B8%B0/id1403184041"
+    }
 
     return (
 <div className="wrap">
@@ -336,7 +456,7 @@ class Main extends React.Component {
 			<div className={classes.btn_area}>
 				<a className={classes.btn_area_a} href="https://itunes.apple.com/kr/app/teamquick-%ED%8C%80%ED%80%B5-%EB%A1%A4-%EB%93%80%EC%98%A4-%EA%B2%A9%EC%A0%84-%ED%8C%80-%EC%B0%BE%EA%B8%B0/id1403184041" target="_blank"><img src="./img/common/btn_appstore.png" /></a>
 				<a className={classes.btn_area_a} href="https://play.google.com/store/apps/details?id=com.teamquick8" target="_blank"><img src="./img/common/btn_googleplay.png" /></a>
-        <a className={classes.btn_area_a_mobile} href="#" target="_blank"><img src="./img_m/common/btn_appDownload.png" /></a>
+        <a className={classes.btn_area_a_mobile} href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>앱 다운로드</a>
 			</div>      
 		</div>
 	</div>
@@ -346,9 +466,10 @@ class Main extends React.Component {
  	<div className={classes.content + " " + classes.page2__content}>
  		<div className={classes.textbox2}>
  			<div className={classes.textarea + " " + classes.light}>개인매칭<br />
-       <span className={classes.subCopy}>롤 듀오, 자유랭크 팀 찾기</span></div>
+       <span className={classes.subCopy}>롤 듀오, 자유랭크 팀 찾기</span>
+      </div>
  			<div className={classes.tab_area}>
- 				<ul>
+ 				<ul className={classes.myUl}>
            <li 
             className={this.state.active1.first ? classes.textbox2__tab_area_li_active : classes.textbox2__tab_area_li}
             onClick={() => {
@@ -393,16 +514,17 @@ class Main extends React.Component {
       {this.state.active1.second ? <img src="./img/main/img_main01.png" /> : null}
       {this.state.active1.third ? <img src="./img/main/img_main01.png" /> : null}
      </div>
+     <div className={classes.bottom_img1} />
  	</div>
  </div>
 
  <div className={classes.container + " " + classes.page3 + " " + classes.container_page3}>
- 	<div className={classes.content}>
+ 	<div className={classes.content + " " + classes.page3__content}>
  		<div className={classes.textbox2}>
  			<div className={classes.text_area + " " + classes.light}>팀 매칭<br />
        <span className={classes.subCopy}>연습경기 만들기 / 찾기</span></div>
  			<div className={classes.tab_area}>
- 				<ul>
+ 				<ul className={classes.myUl}>
            <li 
             className={this.state.active2.first ? classes.textbox2__tab_area_li_active : classes.textbox2__tab_area_li}
             onClick={() => {
@@ -432,6 +554,7 @@ class Main extends React.Component {
      {this.state.active2.first ? <img src="./img/main/img_main02.png" /> : null}
      {this.state.active2.second ? <img src="./img/main/img_main02.png" /> : null}
     </div>
+    <div className={classes.bottom_img2} />
  	</div>
  </div>
 
@@ -449,19 +572,18 @@ class Main extends React.Component {
 
 <div className={classes.footer}>
 		<div className={classes.footer__top_area}>
-			<div className={classes.footer__top_area__sitemap_box} style={{margin:"0 144 0 0"}}>
-				<span className={classes.footer__title}>안내</span>
+			<div className={classes.footer__top_area__sitemap_box}>
+				<span className={classes.footer__title + " " + classes.footer_a}>안내</span>
 				<ul>
-					<li><a href="#">공지사항</a></li>
-					<li><a href="#">자주 묻는 질문</a></li>
+					<li><a className={classes.footer_a} href="#">공지사항</a></li>
+					<li><a className={classes.footer_a} href="#">자주 묻는 질문</a></li>
 				</ul>
 			</div>
 			<div className={classes.footer__top_area__sitemap_box}>
-				<span className={classes.footer__title}>문의</span>
+				<span className={classes.footer__title + " " + classes.footer_a}>문의</span>
 				<ul>
-					<li><a href="mailto:admin@teamquick.app">채용</a></li>
-          <li><a href="mailto:admin@teamquick.app">제휴</a></li>
-          <li><a href="mailto:admin@teamquick.app">마케팅</a></li>
+          <li><a className={classes.footer_a} href="mailto:admin@teamquick.app">제휴</a></li>
+          <li><a className={classes.footer_a} href="mailto:admin@teamquick.app">마케팅</a></li>
 				</ul>
 			</div>
 			{/* <div className={classes.footer__top_area__sitemap_box} style={{marginRight:144}}>
@@ -492,7 +614,7 @@ class Main extends React.Component {
 			<div className={classes.footer__bottom_area__footer_text}>ⓒ  2018 TeamQuick</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진<br />
-				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관) | 문의 : <a className={classes.underline} href="mailto:admin@teamquick.app">admin@teamquick.app</a>
+				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:admin@teamquick.app">admin@teamquick.app</a>
 			</div>
 			{/* <div className={classes.footer__bottom_area__footer_text}>
 				<a href="#">이용약관</a>&nbsp; |&nbsp;

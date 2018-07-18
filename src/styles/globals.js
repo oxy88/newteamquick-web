@@ -343,7 +343,8 @@ export default {
       lineHeight: 1.5
     },
     ul: {
-      listStyle: 'none'
+      listStyle: 'none',
+      padding: 0,
     },
     a: {
       background: "transparent",
