@@ -440,7 +440,7 @@ class Main extends React.Component {
     
     let appDownLoadUrl = ""
 
-    if (os === 'android') {
+    if (os === 'Android') {
       appDownLoadUrl = "https://play.google.com/store/apps/details?id=com.teamquick8"
     }
     if (os === 'iOS') {
