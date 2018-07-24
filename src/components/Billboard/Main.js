@@ -619,10 +619,10 @@ class Main extends React.Component {
 				팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진<br />
 				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:admin@teamquick.app">admin@teamquick.app</a>
 			</div>
-			{/* <div className={classes.footer__bottom_area__footer_text}>
-				<a href="#">이용약관</a>&nbsp; |&nbsp;
-				<a href="#">개인정보 처리방침</a>
-			</div> */}
+			<div className={classes.footer__bottom_area__footer_text}>
+				{/* <a href="#">이용약관</a>&nbsp; |&nbsp; */}
+				<a href="privacy">개인정보 처리방침</a>
+			</div>
 		</div>
 </div>
 
