@@ -12,8 +12,13 @@ class Recruit extends React.Component {
                     height: "100",
                 }}>팀퀵 홈으로 돌아가기</button>
                 </Link>
-                <img src="./images/recruit_developer.jpg" />
-                <img src="./images/recruit_designer.jpg" />
+                <div style={{
+                    margin: "0 auto",
+                    width: "960px"
+                }}>
+                <img src="../images/recruit_developer.jpg" />
+                <img src="../images/recruit_designer.jpg" />
+                </div>
             </div>
         )
     }
