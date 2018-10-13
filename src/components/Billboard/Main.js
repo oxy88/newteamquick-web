@@ -94,9 +94,10 @@ const styles = theme => ({
     "margin": "0 auto",
     "overflow": "hidden",    
     [`@media (min-width: ${borderWeb}px)`]: {
-      "minWidth": "1460px",
-      "width": "100%",
-      "maxHeight": "1030px",    
+      // "minWidth": "1460px",
+      "width": "100vw",
+      "height": "100vh",
+      // "maxHeight": "1030px",    
     }
   },
   "content": {
@@ -164,7 +165,7 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/bg_main01.jpg\")",
+    "backgroundImage": "url(\"../img_m/common/back1.png\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
@@ -178,7 +179,7 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/bg_main01.jpg\")",
+    "backgroundImage": "url(\"../img_m/common/back2.png\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
@@ -192,7 +193,7 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/bg_main01.jpg\")",
+    "backgroundImage": "url(\"../img_m/common/back3.png\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
@@ -206,7 +207,7 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/bg_main01.jpg\")",
+    "backgroundImage": "url(\"../img_m/common/back4.png\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
@@ -223,7 +224,10 @@ const styles = theme => ({
       }
   },
   "logo": {
-    "display": "none",
+    display: 'block',
+    position: 'absolute',
+    left: '6.1vw',
+    top: '5.1vh',
     [`@media (min-width: ${borderWeb}px)`]: {
       "position": "absolute",
       "margin": "35px 0 0 65px",
@@ -539,85 +543,147 @@ const Page1CopyBox = styled.div`
 `
 
 const Page1Copy = styled.span`
-  font-size: 40px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.35;
-  letter-spacing: normal;
-  text-align: left;
+  font-size: 30px;
   color: #ffffff;
+  @media (min-width: ${borderWeb}px) {
+    display: inline;
+    font-size: 40px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
 `
 
 const Page1SubCopyBox = styled.div`
   position: absolute;
   top: 36.9vh;
   left: 10.6vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 36.9vh;
+    left: 10.6vw;
+  }
 `
 
 const Page1SubCopyBox2 = styled.div`
   position: absolute;
-  top: 50.8vh;
+  top: 44vh;
   left: 10.6vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 50.8vh;
+    left: 10.6vw;
+  }
 `
 
 const Page1SubCopyBox3 = styled.div`
   position: absolute;
-  top: 64.6vh;
+  top: 51vh;
   left: 10.6vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 64.6vh;
+    left: 10.6vw;
+  }
 `
 
 const Page1SubCopy = styled.span`
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  font-size: 15px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 2.67;
-  letter-spacing: 1.2px;
-  text-align: left;
-  color: #ffffff;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #ffffff;
+  }
 `
 
 const Page1SubSubCopy = styled.span`
   display: block;
-  margin-top: 10px;
-  font-size: 15px;
   font-weight: 100;
-  font-style: normal;
-  font-stretch: normal;
-  text-align: left;
   color: #ffffff;
+  margin: 0px;
+  @media (min-width: ${borderWeb}px) {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+`
+
+const MobilePage1Contact = styled.div`
+    margin-top: 8px;
+    width: 300px;
+    height: 39px;
+    border: solid 3px #58595b;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }
 `
 
 const Page1Contact = styled.div`
-  position: absolute;
-  bottom: 45px;
-  left: 10.6vw;
-  width: 300px;
-  height: 39px;
-  border-radius: 20px;
-  background-color: #58595b;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    bottom: 45px;
+    left: 10.6vw;
+    width: 300px;
+    height: 39px;
+    border-radius: 20px;
+    background-color: #58595b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+const MobileSocialContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 6.1vw;
+  bottom: 9.8vh;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }
 `
 
 const SocialContainer = styled.div`
-  position: absolute;
-  bottom: 45px;
-  right: 90px;
-  display: flex;
-  flexDirection: row;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    bottom: 45px;
+    right: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const SocialButton = styled.div`
   width: 233px;
   height: 39px;
+  margin-top: 8px;
   margin-right: 19px;
   border-radius: 20px;
   border: solid 3px #58595b;
@@ -636,12 +702,15 @@ const SocialLink = styled.span`
 `
 
 const PartnerContainer = styled.div`
-  position: absolute;
-  bottom: 29.7vh;
-  right: 1vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    bottom: 29.7vh;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const BusinessButton = styled.div`
@@ -652,6 +721,22 @@ const BusinessButton = styled.div`
   height: 39px;
   background-color: #d92129;
   border-radius: 20px;
+`
+
+const MobileBusinessButton = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 10vh;
+  left: 6.1vw;
+  justify-content: center;
+  align-items: center;
+  width: 281.6px;
+  height: 39px;
+  background-color: #d92129;
+  border-radius: 20px;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }
 `
 
 const PartnersButton = styled.div`
@@ -683,51 +768,72 @@ const Page2Right = styled.div`
 `
 
 const Page2ContentsContainer = styled.div`
-  position: absolute;
-  bottom: 19.5vh;
-  left: 4.2vw;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    bottom: 19.5vh;
+    left: 4.2vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Page2Copy = styled.span`
-  z-index: 10;
-  font-size: 40px;
-  text-align: left;
-  color: #ffffff;
+  font-size: 32px;
+  color: #58595b;
+  @media (min-width: ${borderWeb}px) {
+    z-index: 10;
+    font-size: 40px;
+    text-align: left;
+    color: #ffffff;
+  }
 `
 
 const Page2SubCopy = styled.span`
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 100;
-  color: #ffffff;
+  color: #58595b;
+  display: flex;
+  @media (min-width: ${borderWeb}px) {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #ffffff;
+  }
 `
 
 const Page0ContentsContainer = styled.div`
-  position: absolute;
-  top: 15vh;
-  left: 10vw;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Page0DetailsContainer = styled.div`
-  position: absolute;
-  bottom: 20vh;
-  left: 10vw;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
+  display: none;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    bottom: 20vh;
+    left: 10vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Page0Copy = styled.span`
-  z-index: 10;
-  font-size: 40px;
-  text-align: left;
-  color: #ffffff;
+  font-size: 32px;
+  color: #d92129;
+  @media (min-width: ${borderWeb}px) {
+    z-index: 10;
+    font-size: 40px;
+    text-align: left;
+    color: #ffffff;
+  }
 `
 
 const DownloadApp = styled.div`
@@ -752,18 +858,92 @@ const RequestPartner = styled.div`
 `
 
 const AllLinks = styled.div`
-  margin-top: 36px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
+  @media (min-width: ${borderWeb}px) {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const EachLink = styled.span`
-  margin-top: 4px;
-  color: #cccccc;
-  fontWeight: 100;
-  fontSize: 13px;
+  color: #666666;
+  @media (min-width: ${borderWeb}px) { 
+    margin-top: 4px;
+    color: #cccccc;
+    fontWeight: 100;
+    fontSize: 13px;
+    display: flex;
+    align-items: center;
+  }
+`
+
+const MobilePage0Container = styled.div`
+  position: absolute;
+  top: 12.3vh;
+  bottom: 5.8vh;
+  left: 6.1vw;
+  right: 6.1vw;
+  width: 87.7vw;
+  height: 81.9vh;
+  opacity: 0.8;
+  border-radius: 8px;
+  background-color: #ffffff;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }  
+`
+
+const MobilePage0ContentsContainer = styled.div`
+  position: absolute;
+  top: 13.5vh;
+  bottom: 13.5vh;
+  left: 11.5vw;
+  right: 11.5vw;
+  width: 77vw;
+  height: 77.9vh;
+  z-index: 10;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }  
+`
+
+const MobilePage2Container = styled.div`
+  position: absolute;
+  top: 25.8vh;
+  bottom: 19.3vh;
+  left: 6.1vw;
+  right: 6.1vw;
+  width: 87.7vw;
+  height: 54.9vh;
+  opacity: 0.8;
+  border-radius: 8px;
+  background-color: #ffffff;
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }  
+`
+
+const MobilePage2ContentsContainer = styled.div`
+  position: absolute;
+  top: 28.4vh;
+  bottom: 24.1vh;
+  left: 11.5vw;
+  right: 11.5vw;
+  width: 77vw;
+  height: 47.5vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  @media (min-width: ${borderWeb}px) {
+    display: none;
+  }  
 `
 
 class Main extends React.Component {
@@ -834,7 +1014,7 @@ class Main extends React.Component {
       <Page0Copy>
         우리가 만드는 e스포츠
       </Page0Copy>      
-      <span style={{marginTop: "16px", color: "#ffffff", fontWeight: 100}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
+      <span style={{marginTop: "16px", color: "#d9212a", fontWeight: 100}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
     </Page0ContentsContainer>
     <Page0DetailsContainer>
         <DownloadApp>
@@ -890,6 +1070,71 @@ class Main extends React.Component {
             </span>070-4060-8222</EachLink>
         </AllLinks>
     </Page0DetailsContainer>
+
+    <MobilePage0Container>
+    </MobilePage0Container>
+
+    <MobilePage0ContentsContainer>
+      <Page0Copy>
+        생활 게임 평생 게임 
+      </Page0Copy>
+      <Page0Copy>
+        우리가 만드는 e스포츠
+      </Page0Copy>      
+      <span style={{marginTop: "4px", color: "#d92129"}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
+      <DownloadApp>
+          <span style={{
+            color: "#ffffff",
+            fontWeight: 500,
+            fontSize: "15px"
+          }}>Download App</span>
+        </DownloadApp>
+        <RequestPartner>
+          <span style={{
+            color: "#818181",
+            fontWeight: 500,
+            fontSize: "15px"
+          }}>팀퀵 파트너 신청하기</span>
+        </RequestPartner>
+        <AllLinks>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/fb.png" />
+            </span>페이스북 페이지</EachLink>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/youtube.png" />
+            </span>유튜브 페이지</EachLink>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/twitch.png" />
+            </span>트위터 페이지</EachLink>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/mail.png" />
+            </span>제휴 문의 : business@teamquick.gg</EachLink>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/mail.png" />
+            </span>고객 문의 : help@teamquick.gg</EachLink>
+          <EachLink>
+            <span style={{
+              marginRight: '12px'
+            }}>
+              <img src="./img/common/call.png" />
+            </span>070-4060-8222</EachLink>
+        </AllLinks>
+      </MobilePage0ContentsContainer> 
 	</div>
 </div>
 
@@ -925,6 +1170,42 @@ class Main extends React.Component {
         </span>광고주에게 맞춤형 타게팅 서비스 제공
       </Page2SubCopy>      
     </Page2ContentsContainer>    
+
+    <MobilePage2Container>
+    </MobilePage2Container>
+
+    <MobilePage2ContentsContainer>
+      <Page2Copy>
+        e스포츠 유저 데이터
+      </Page2Copy>
+      <Page2Copy>
+        분석 알고리즘
+      </Page2Copy>
+      <Page2SubCopy>
+        <span style={{
+          marginRight: "16px"
+        }}>
+          <img src="./img_m/common/icon1.png"/>
+        </span>
+        <span style={{
+        }}>게이머의 통합 게임 데이터 확보 및 패턴 관리
+        </span>
+      </Page2SubCopy>
+      <Page2SubCopy>
+        <span style={{
+          marginRight: "16px"
+        }}>
+          <img src="./img_m/common/icon2.png"/>
+        </span>각 게이머에게 맞춤형 팀과 대회 추천
+      </Page2SubCopy>
+      <Page2SubCopy>
+        <span style={{
+          marginRight: "16px"
+        }}>
+          <img src="./img_m/common/icon3.png"/>
+        </span>광고주에게 맞춤형 타게팅 서비스 제공
+      </Page2SubCopy>            
+    </MobilePage2ContentsContainer>
 	</div>
 </div>
 
@@ -992,6 +1273,30 @@ class Main extends React.Component {
       <SocialLink>Facebook</SocialLink>
     </SocialButton>
     </SocialContainer>    
+
+    <MobileSocialContainer>
+      <SocialButton>
+        <SocialLink>Twitch</SocialLink>
+      </SocialButton>
+      <SocialButton>
+        <SocialLink>Youtube</SocialLink>
+      </SocialButton>
+      <SocialButton>
+        <SocialLink>Facebook</SocialLink>
+      </SocialButton>      
+      <MobilePage1Contact>
+        <span style={{
+          color: "#58595b",
+          fontSize: "15px",
+          fontWeight: 500
+        }}>E-Mail 고객문의</span>
+        <span style={{
+          color: "#999999",
+          fontSize: "13px",
+          fontWeight: 100
+        }}>&nbsp;(help@teamquick.gg)</span>
+    </MobilePage1Contact>       
+    </MobileSocialContainer>
 	</div>
 </div>
 <div className={classes.container + " "} >
@@ -1066,6 +1371,19 @@ class Main extends React.Component {
         color: "#58595b"
       }}>아이비스 PC방 유성봉명점, 아이비스 PC방 서산석림점</span>
     </PartnerContainer>    
+
+      <MobileBusinessButton>
+        <span style={{
+          fontSize: '15px',
+          color: "#ffffff",
+          fontWeight: 500
+        }}>E-Mail 제휴문의</span>
+        <span style={{
+          fontSize: '13px',
+          fontWeight: 100,
+          color: "#cccccc"
+        }}>&nbsp;(biz@teamquick.gg)</span>
+      </MobileBusinessButton>    
 	</div>
 </div>
 
@@ -1114,7 +1432,7 @@ class Main extends React.Component {
 			<div className={classes.footer__bottom_area__footer_text}>ⓒ  2018 TeamQuick</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진<br />
-				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:admin@teamquick.app">admin@teamquick.app</a>
+				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:helpn@teamquick.app">helpn@teamquick.app</a>
 			</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				{/* <a href="#">이용약관</a>&nbsp; |&nbsp; */}
