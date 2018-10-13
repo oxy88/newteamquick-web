@@ -489,7 +489,26 @@ const styles = theme => ({
   flexRowContainer: {
     display: 'flex',
     flexDirection: "row"
-  } 
+  },
+  page1Copy: {
+    fontSize: "30px",
+    color: "#ffffff",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: "inline",
+      fontSize: "40px",
+      lineHeight: 1.35,
+      color: "#ffffff" 
+    }
+  },
+  page0Copy: {
+    fontSize: "27px",
+    color: "#d92129",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      zIndex: 10,
+      fontSize: "40px",
+      color: "#ffffff"
+    }    
+  }  
 })
 
 const Page1Top = styled.div`
@@ -1048,12 +1067,12 @@ class Main extends React.Component {
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back1}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
     <Page0ContentsContainer>
-      <Page0Copy>
+      <span className={classes.page0Copy}>
         생활 게임 평생 게임 
-      </Page0Copy>
-      <Page0Copy>
+      </span>
+      <span className={classes.page0Copy}>
         우리가 만드는 e스포츠
-      </Page0Copy>      
+      </span>            
       <span style={{marginTop: "16px", color: "#d9212a", fontWeight: 100}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
     </Page0ContentsContainer>
     <Page0DetailsContainer>
