@@ -508,6 +508,44 @@ const styles = theme => ({
       fontSize: "40px",
       color: "#ffffff"
     }    
+  },
+  page0ContentsContainer: {
+    display: "none",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      position: "absolute",
+      top: "15vh",
+      left: "10vw",
+      zIndex: 10,
+      display: "flex",
+      flexDirection: "column"
+    }  
+  },
+  page0DetailsContainer: {
+    display: "none",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      position: "absolute",
+      bottom: "20vh",
+      left: "10vw",
+      zIndex: 10,
+      display: "flex",
+      flexDirection: "column"
+    }
+  },
+  mobilePage0ContentsContainer: {
+    position: "absolute",
+    top: "13.5vh",
+    bottom: "13.5vh",
+    left: "11.5vw",
+    right: "11.5vw",
+    width: "77vw",
+    height: "77.9vh",
+    zIndex: 10,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: "none"
+    }    
   }  
 })
 
@@ -1066,7 +1104,7 @@ class Main extends React.Component {
 <div className={classes.container} >
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back1}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
-    <Page0ContentsContainer>
+    <div className={classes.page0ContentsContainer}>
       <span className={classes.page0Copy}>
         생활 게임 평생 게임 
       </span>
@@ -1074,8 +1112,8 @@ class Main extends React.Component {
         우리가 만드는 e스포츠
       </span>            
       <span style={{marginTop: "16px", color: "#d9212a", fontWeight: 100}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
-    </Page0ContentsContainer>
-    <Page0DetailsContainer>
+    </div>
+    <div className={classes.page0DetailsContainer}>
         <a href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>
         <DownloadApp>
           <span style={{
@@ -1148,12 +1186,12 @@ class Main extends React.Component {
             </span>070-4060-8222</EachLink>
         </a>
         </AllLinks>
-    </Page0DetailsContainer>
+    </div>
 
     <MobilePage0Container>
     </MobilePage0Container>
 
-    <MobilePage0ContentsContainer>
+    <div className={classes.mobilePage0ContentsContainer}>
       <Page0Copy>
         생활 게임 평생 게임 
       </Page0Copy>
@@ -1227,7 +1265,7 @@ class Main extends React.Component {
             </span>070-4060-8222</EachLink>
         </a>
         </AllLinks>
-      </MobilePage0ContentsContainer> 
+      </div>
 	</div>
 </div>
 
