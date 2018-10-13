@@ -865,7 +865,7 @@ const Page0DetailsContainer = styled.div`
 `
 
 const Page0Copy = styled.span`
-  font-size: 32px;
+  font-size: 27px;
   color: #d92129;
   @media (min-width: ${borderWeb}px) {
     z-index: 10;
