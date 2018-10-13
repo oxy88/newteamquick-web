@@ -170,7 +170,7 @@ const styles = theme => ({
     backgroundRepeat: "no-repeat",
     "backgroundPosition": "center",
     [`@media (min-width: ${borderWeb}px)`]: {
-    "backgroundImage": "url(\"../img/common/back1.png\")",
+    "backgroundImage": "url(\"../img/common/back1.jpg\")",
     "backgroundSize": "cover",
     }
   },
@@ -184,7 +184,7 @@ const styles = theme => ({
     backgroundRepeat: "no-repeat",
     "backgroundPosition": "center",
     [`@media (min-width: ${borderWeb}px)`]: {
-    "backgroundImage": "url(\"../img/common/back2.png\")",
+    "backgroundImage": "url(\"../img/common/back2.jpg\")",
     "backgroundSize": "cover",
     }
   },
