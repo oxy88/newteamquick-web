@@ -909,8 +909,9 @@ const AllLinks = styled.div`
 
 const EachLink = styled.span`
   color: #666666;
+  margin-top: 4px;
   @media (min-width: ${borderWeb}px) { 
-    margin-top: 4px;
+    margin-top: 10px;
     color: #cccccc;
     fontWeight: 100;
     fontSize: 13px;
@@ -1031,7 +1032,7 @@ class Main extends React.Component {
 
     const os = this.getMobileOS()
     
-    let appDownLoadUrl = ""
+    let appDownLoadUrl = "https://play.google.com/store/apps/details?id=com.teamquick8"
 
     if (os === 'Android') {
       appDownLoadUrl = "https://play.google.com/store/apps/details?id=com.teamquick8"
@@ -1056,6 +1057,7 @@ class Main extends React.Component {
       <span style={{marginTop: "16px", color: "#d9212a", fontWeight: 100}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
     </Page0ContentsContainer>
     <Page0DetailsContainer>
+        <a href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>
         <DownloadApp>
           <span style={{
             color: "#ffffff",
@@ -1063,6 +1065,7 @@ class Main extends React.Component {
             fontSize: "15px"
           }}>Download App</span>
         </DownloadApp>
+        </a>
         <RequestPartner>
           <span style={{
             color: "#818181",
@@ -1071,42 +1074,60 @@ class Main extends React.Component {
           }}>팀퀵 파트너 신청하기</span>
         </RequestPartner>
         <AllLinks>
+        <a href="https://www.facebook.com/teamquickapp" target="_blank" >
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/fb.png" />
             </span>페이스북 페이지</EachLink>
+          </a>
+        <a href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank" >          
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/youtube.png" />
             </span>유튜브 페이지</EachLink>
+        </a>
+        <a href="https://www.twitch.tv/teamquickapp" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/twitch.png" />
-            </span>트위터 페이지</EachLink>
+            </span>트위치 페이지</EachLink>
+        </a>
+        <a href="mailto:business@teamquick.gg" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
             </span>제휴 문의 : business@teamquick.gg</EachLink>
+        </a>
+        <a href="mailto:help@teamquick.gg" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
             </span>고객 문의 : help@teamquick.gg</EachLink>
+        </a>
+        <a href="" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
+              marginTop: "-3px"
             }}>
               <img src="./img/common/call.png" />
             </span>070-4060-8222</EachLink>
+        </a>
         </AllLinks>
     </Page0DetailsContainer>
 
@@ -1121,13 +1142,15 @@ class Main extends React.Component {
         우리가 만드는 e스포츠
       </Page0Copy>      
       <span style={{marginTop: "4px", color: "#d92129"}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
-      <DownloadApp>
+        <a href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>
+        <DownloadApp>
           <span style={{
             color: "#ffffff",
             fontWeight: 500,
             fontSize: "15px"
           }}>Download App</span>
         </DownloadApp>
+        </a>
         <RequestPartner>
           <span style={{
             color: "#818181",
@@ -1136,42 +1159,54 @@ class Main extends React.Component {
           }}>팀퀵 파트너 신청하기</span>
         </RequestPartner>
         <AllLinks>
+        <a href="https://www.facebook.com/teamquickapp" target="_blank" >
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/fb.png" />
             </span>페이스북 페이지</EachLink>
+          </a>
+        <a style={{ marginTop: "12px"}} href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank" >          
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/youtube.png" />
             </span>유튜브 페이지</EachLink>
+        </a>
+        <a style={{ marginTop: "12px"}} href="https://www.twitch.tv/teamquickapp" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/twitch.png" />
-            </span>트위터 페이지</EachLink>
+            </span>트위치 페이지</EachLink>
+        </a>
+        <a style={{ marginTop: "12px"}} href="mailto:business@teamquick.gg" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
             </span>제휴 문의 : business@teamquick.gg</EachLink>
+        </a>
+        <a style={{ marginTop: "12px"}} href="mailto:helpn@teamquick.gg" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
             </span>고객 문의 : help@teamquick.gg</EachLink>
+        </a>
+        <a style={{ marginTop: "12px"}} href="" target="_blank" >        
           <EachLink>
             <span style={{
-              marginRight: '12px'
+              marginRight: '12px',
             }}>
               <img src="./img/common/call.png" />
             </span>070-4060-8222</EachLink>
+        </a>
         </AllLinks>
       </MobilePage0ContentsContainer> 
 	</div>
@@ -1288,6 +1323,7 @@ class Main extends React.Component {
       </Page1SubSubCopy>
     </Page1SubCopyBox3> 
 
+    <a href="mailto:help@teamquick.gg">
     <Page1Contact>
       <span style={{
         color: "#ffffff",
@@ -1300,29 +1336,47 @@ class Main extends React.Component {
         fontWeight: 100
       }}>&nbsp;(help@teamquick.gg)</span>
     </Page1Contact> 
+    </a>
 
     <SocialContainer>
+    <a href="https://www.twitch.tv/teamquickapp" tager="_blank">
     <SocialButton>
-      <SocialLink>Twitch</SocialLink>
+      <SocialLink>
+          Twitch
+      </SocialLink>
     </SocialButton>
+    </a>
+    <a href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank">
     <SocialButton>
       <SocialLink>Youtube</SocialLink>
     </SocialButton>
+    </a>
+    <a href="https://www.facebook.com/teamquickapp" target="_blank">
     <SocialButton>
       <SocialLink>Facebook</SocialLink>
     </SocialButton>
+    </a>
     </SocialContainer>    
 
     <MobileSocialContainer>
+      <a href="https://www.twitch.tv/teamquickapp" tager="_blank">
       <SocialButton>
-        <SocialLink>Twitch</SocialLink>
+        <SocialLink>
+            Twitch
+        </SocialLink>
       </SocialButton>
+      </a>
+      <a href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank">
       <SocialButton>
         <SocialLink>Youtube</SocialLink>
       </SocialButton>
+      </a>
+      <a href="https://www.facebook.com/teamquickapp" target="_blank">
       <SocialButton>
         <SocialLink>Facebook</SocialLink>
       </SocialButton>      
+      </a>
+      <a href="mailto:help@teamquick.gg">
       <MobilePage1Contact>
         <span style={{
           color: "#58595b",
@@ -1335,6 +1389,7 @@ class Main extends React.Component {
           fontWeight: 100
         }}>&nbsp;(help@teamquick.gg)</span>
     </MobilePage1Contact>       
+    </a>
     </MobileSocialContainer>
 	</div>
 </div>
@@ -1388,6 +1443,7 @@ class Main extends React.Component {
     </Page2SubCopyBox3>     
 
     <PartnerContainer>
+      <a href="mailto:biz@teamquick.gg">
       <BusinessButton>
         <span style={{
           fontSize: '15px',
@@ -1400,6 +1456,7 @@ class Main extends React.Component {
           color: "#cccccc"
         }}>&nbsp;(biz@teamquick.gg)</span>
       </BusinessButton>
+      </a>
       <PartnersButton>
         <span style={{
           color: "#d9212a"
@@ -1411,6 +1468,7 @@ class Main extends React.Component {
       }}>아이비스 PC방 유성봉명점, 아이비스 PC방 서산석림점</span>
     </PartnerContainer>    
 
+      <a href="mailto:biz@teamquick.gg">
       <MobileBusinessButton>
         <span style={{
           fontSize: '15px',
@@ -1423,6 +1481,7 @@ class Main extends React.Component {
           color: "#cccccc"
         }}>&nbsp;(biz@teamquick.gg)</span>
       </MobileBusinessButton>    
+      </a>
 	</div>
 </div>
 
@@ -1467,11 +1526,11 @@ class Main extends React.Component {
 		</div> */}
 		
 		<div className={classes.footer__bottom_area}>
-			<div className="footer_logo"><img src="./img/common/footer_logo.png" /></div>
+			{/* <div className="footer_logo"><img src="./img/common/icon.png" /></div> */}
 			<div className={classes.footer__bottom_area__footer_text}>ⓒ  2018 TeamQuick</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진<br />
-				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:helpn@teamquick.app">helpn@teamquick.app</a>
+				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:helpn@teamquick.app">help@teamquick.app</a>
 			</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				{/* <a href="#">이용약관</a>&nbsp; |&nbsp; */}
