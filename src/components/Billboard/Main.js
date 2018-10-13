@@ -546,7 +546,61 @@ const styles = theme => ({
     [`@media (min-width: ${borderWeb}px)`]: {
       display: "none"
     }    
-  }  
+  },
+  mobilePage0Container: {
+    position: "absolute",
+    top: "12.3vh",
+    bottom: "5.8vh",
+    left: "6.1vw",
+    right: "6.1vw",
+    width: "87.7vw",
+    height: "81.9vh",
+    opacity: "0.8",
+    borderRadius: "8px",
+    backgroundColor: "#ffffff",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      display: "none"
+    }      
+  },
+  downloadApp: {
+    width: "162px",
+    height: "39px",
+    borderRadius: "20px",
+    backgroundColor: "#818181",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  requestPartner: {
+    marginTop: "16px",
+    width: "183px",
+    height: "39px",
+    borderRadius: "20px",
+    border: "solid 3px #818181",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  allLinks: {
+    marginTop: "0px",
+    display: "flex",
+    flexDirection: "column",
+    [`@media (min-width: ${borderWeb}px)`]: {
+      marginTop: "36px",
+      display: "flex",
+      flexDirection: "column"
+    }    
+  },
+  eachLink: {
+    color: "#666666",
+    marginTop: "4px",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      marginTop: "10px",
+      color: "#cccccc",
+      display: "flex",
+      alignItems: "center"
+    }    
+  }
 })
 
 const Page1Top = styled.div`
@@ -1115,156 +1169,156 @@ class Main extends React.Component {
     </div>
     <div className={classes.page0DetailsContainer}>
         <a href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>
-        <DownloadApp>
+        <div className={classes.downloadApp}>
           <span style={{
             color: "#ffffff",
             fontWeight: 500,
             fontSize: "15px"
           }}>Download App</span>
-        </DownloadApp>
+        </div>
         </a>
-        <RequestPartner>
+        <div className={classes.requestPartner}>
           <span style={{
             color: "#818181",
             fontWeight: 500,
             fontSize: "15px"
           }}>팀퀵 파트너 신청하기</span>
-        </RequestPartner>
-        <AllLinks>
+        </div>
+        <div className={classes.allLinks}>
         <a href="https://www.facebook.com/teamquickapp" target="_blank" >
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/fb.png" />
-            </span>페이스북 페이지</EachLink>
+            </span>페이스북 페이지</span>
           </a>
         <a href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank" >          
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/youtube.png" />
-            </span>유튜브 페이지</EachLink>
+            </span>유튜브 페이지</span>
         </a>
         <a href="https://www.twitch.tv/teamquickapp" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/twitch.png" />
-            </span>트위치 페이지</EachLink>
+            </span>트위치 페이지</span>
         </a>
         <a href="mailto:business@teamquick.gg" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
-            </span>제휴 문의 : business@teamquick.gg</EachLink>
+            </span>제휴 문의 : business@teamquick.gg</span>
         </a>
         <a href="mailto:help@teamquick.gg" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
-            </span>고객 문의 : help@teamquick.gg</EachLink>
+            </span>고객 문의 : help@teamquick.gg</span>
         </a>
         <a href="" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/call.png" />
-            </span>070-4060-8222</EachLink>
+            </span>070-4060-8222</span>
         </a>
-        </AllLinks>
+        </div>
     </div>
 
-    <MobilePage0Container>
-    </MobilePage0Container>
+    <div className={classes.mobilePage0Container}>
+    </div>
 
     <div className={classes.mobilePage0ContentsContainer}>
-      <Page0Copy>
+      <span className={classes.page0Copy}>
         생활 게임 평생 게임 
-      </Page0Copy>
-      <Page0Copy>
+      </span>
+      <span className={classes.page0Copy}>
         우리가 만드는 e스포츠
-      </Page0Copy>      
+      </span>
       <span style={{marginTop: "4px", color: "#d92129"}}>팀퀵을 통해 누구나 쉽게 일상 속에서 e스포츠를 경험하고 즐깁니다</span>
         <a href={appDownLoadUrl} target={appDownLoadUrl ? "_blank" : null}>
-        <DownloadApp>
+        <div className={classes.downloadApp}>
           <span style={{
             color: "#ffffff",
             fontWeight: 500,
             fontSize: "15px"
           }}>Download App</span>
-        </DownloadApp>
+        </div>
         </a>
-        <RequestPartner>
+        <div className={classes.requestPartner}>
           <span style={{
             color: "#818181",
             fontWeight: 500,
             fontSize: "15px"
           }}>팀퀵 파트너 신청하기</span>
-        </RequestPartner>
-        <AllLinks>
+        </div>
+        <div className={classes.allLinks}>
         <a href="https://www.facebook.com/teamquickapp" target="_blank" >
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/fb.png" />
-            </span>페이스북 페이지</EachLink>
+            </span>페이스북 페이지</span>
           </a>
         <a style={{ marginTop: "12px"}} href="https://www.youtube.com/channel/UC8am9SwIPvM7XYXv3c3Fh4g" target="_blank" >          
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/youtube.png" />
-            </span>유튜브 페이지</EachLink>
+            </span>유튜브 페이지</span>
         </a>
         <a style={{ marginTop: "12px"}} href="https://www.twitch.tv/teamquickapp" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/twitch.png" />
-            </span>트위치 페이지</EachLink>
+            </span>트위치 페이지</span>
         </a>
         <a style={{ marginTop: "12px"}} href="mailto:business@teamquick.gg" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
-            </span>제휴 문의 : business@teamquick.gg</EachLink>
+            </span>제휴 문의 : business@teamquick.gg</span>
         </a>
         <a style={{ marginTop: "12px"}} href="mailto:helpn@teamquick.gg" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
-            </span>고객 문의 : help@teamquick.gg</EachLink>
+            </span>고객 문의 : help@teamquick.gg</span>
         </a>
         <a style={{ marginTop: "12px"}} href="" target="_blank" >        
-          <EachLink>
+          <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/call.png" />
-            </span>070-4060-8222</EachLink>
+            </span>070-4060-8222</span>
         </a>
-        </AllLinks>
+        </div>
       </div>
 	</div>
 </div>
