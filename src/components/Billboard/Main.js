@@ -600,112 +600,146 @@ const styles = theme => ({
       display: "flex",
       alignItems: "center"
     }    
+  },
+  page2ContentsContainer: {
+    display: "none",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      position: "absolute",
+      bottom: "19.5vh",
+      left: "4.2vw",
+      zIndex: 10,
+      display: "flex",
+      flexDirection: "column"
+    }    
+  },
+  page2Copy: {
+    fontSize: "32px",
+    color: "#58595b",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      zIndex: 10,
+      fontSize: "40px",
+      color: "#ffffff"
+    }
+  },
+  page2SubCopy: {
+    color: "#58595b",
+    display: "flex",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      marginTop: "10px",
+      fontSize: "15px",
+      fontWeight: 100,
+      color: "#ffffff"
+    }
+  },
+  mobilePage2Container: {
+    position: "absolute",
+    top: "25.8vh",
+    bottom: "19.3vh",
+    left: "6.1vw",
+    right: "6.1vw",
+    width: "87.7vw",
+    height: "54.9vh",
+    opacity: 0.8,
+    borderRadius: "8px",
+    backgroundColor: "#ffffff",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      display: "none"
+    }  
+  },
+  mobilePage2ContentsContainer: {
+    position: "absolute",
+    top: "28.4vh",
+    bottom: "24.1vh",
+    left: "11.5vw",
+    right: "11.5vw",
+    width: "77vw",
+    height: "47.5vh",
+    borderFadius: "8px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      display: "none"
+    }  
+  },
+  page1CopyBox: {
+    position: "absolute",
+    top: "18.6vh",
+    left: "6.1vw",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      position: "absolute",
+      top: "18.6vh",
+      left: "10.6vw",
+    }
+  },
+  page1Copy: {
+    fontSize: "30px",
+    color: "#ffffff",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      display: "inline",
+      fontSize: "40px",
+      lineHeight: 1.35,
+      color: "#ffffff"
+    }
+  },
+  page1SubCopy: {
+    display: "none",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      display: "flex",
+      margin: "0px",
+      padding: "0px",
+      fontSize: "15px",
+      fontWeight: "bold",
+      lineHeight: 2.67,
+      letterSpacing: "1.2px",
+      color: "#ffffff"
+    }    
+  },
+  page1SubSubCopy: {
+    fontSize: "14px",
+    display: "block",
+    fontWeight: 100,
+    color: "#ffffff",
+    margin: "0px",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      display: "block",
+      marginTop: "10px",
+      fontSize: "15px",
+      fontWeight: 100,
+      color: "#ffffff"
+    }    
+  },
+  page1SubCopyBox: {
+    position: "absolute",
+    top: "36.9vh",
+    left: "6.1vw",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      position: "absolute",
+      top: "36.9vh",
+      left: "10.6vw",
+    }
+  },
+  page1SubCopyBox2: {
+    position: "absolute",
+    top: "50vh",
+    left: "6.1vw",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      position: "absolute",
+      top: "50.8vh",
+      left: "10.6vw",
+    }
+  },
+  page1SubCopyBox3: {
+    position: "absolute",
+    top: "63vh",
+    left: "6.1vw",
+    [`@media (min-width: ${borderWeb}px)`]: { 
+      position: "absolute",
+      top: "64.6vh",
+      left: "10.6vw",
+    }
   }
 })
-
-const Page1Top = styled.div`
-  background-color: #d9212a;
-  height: 40vh;
-  transform: skewY(-4deg);
-`
-
-const Page1Bottom = styled.div`
-  background-color: #ffffff;
-  height: 60vh;
-  transform: skewY(-4deg);
-  background-image: url("../img/common/bg_main01.png");
-  background-size: 'cover';
-`
-
-const GrayTop = styled.div`
-  background-color: #58595b;
-  height: 72.7vh;
-  transform: skewY(-4deg);
-`
-
-const GrayBottom = styled.div`
-  background-color: #ffffff;
-  height: 35vh;
-  transform: skewY(-4deg);
-`
-
-const RedLeft = styled.div`
-  background-color: #d9212a;
-  width: 72.7vw;
-  transform: skewX(-8deg);
-`
-
-const RedRight = styled.div`
-  background-color: #ffffff;
-  width: 25vw;
-  transform: skewX(-8deg);
-`
-
-const RowContainer = styled.div`
-  background-color: #d9212a;
-  display: flex;
-  flex-direction: row;
-`
-
-const Page1CopyBox = styled.div`
-  position: absolute;
-  top: 18.6vh;
-  left: 6.1vw;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    top: 18.6vh;
-    left: 10.6vw;
-  }
-`
-
-const Page1Copy = styled.span`
-  font-size: 30px;
-  color: #ffffff;
-  @media (min-width: ${borderWeb}px) {
-    display: inline;
-    font-size: 40px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.35;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
-  }
-`
-
-const Page1SubCopyBox = styled.div`
-  position: absolute;
-  top: 36.9vh;
-  left: 6.1vw;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    top: 36.9vh;
-    left: 10.6vw;
-  }
-`
-
-const Page1SubCopyBox2 = styled.div`
-  position: absolute;
-  top: 44vh;
-  left: 6.1vw;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    top: 50.8vh;
-    left: 10.6vw;
-  }
-`
-
-const Page1SubCopyBox3 = styled.div`
-  position: absolute;
-  top: 51vh;
-  left: 6.1vw;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    top: 64.6vh;
-    left: 10.6vw;
-  }
-`
 
 const Page2SubCopyBox = styled.div`
   position: absolute;
@@ -899,202 +933,6 @@ const PartnersButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
-
-const Page2Left = styled.div`
-  background-color: #d9212a;
-  width: 29.3vw;
-  transform: skewX(-8deg);
-`
-
-const Page2Right = styled.div`
-  background-color: #ffffff;
-  transform: skewX(-8deg);
-  z-index: 0;
-  width: 78.6vw;
-  background-image: url("../img/common/bg_main02.png");
-  background-size: 'auto';
-  background-repeat: repeat-x;
-`
-
-const Page2ContentsContainer = styled.div`
-  display: none;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    bottom: 19.5vh;
-    left: 4.2vw;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const Page2Copy = styled.span`
-  font-size: 32px;
-  color: #58595b;
-  @media (min-width: ${borderWeb}px) {
-    z-index: 10;
-    font-size: 40px;
-    text-align: left;
-    color: #ffffff;
-  }
-`
-
-const Page2SubCopy = styled.span`
-  color: #58595b;
-  display: flex;
-  @media (min-width: ${borderWeb}px) {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 100;
-    color: #ffffff;
-  }
-`
-
-const Page0ContentsContainer = styled.div`
-  display: none;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    top: 15vh;
-    left: 10vw;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const Page0DetailsContainer = styled.div`
-  display: none;
-  @media (min-width: ${borderWeb}px) {
-    position: absolute;
-    bottom: 20vh;
-    left: 10vw;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const Page0Copy = styled.span`
-  font-size: 27px;
-  color: #d92129;
-  @media (min-width: ${borderWeb}px) {
-    z-index: 10;
-    font-size: 40px;
-    text-align: left;
-    color: #ffffff;
-  }
-`
-
-const DownloadApp = styled.div`
-  width: 162px;
-  height: 39px;
-  border-radius: 20px;
-  background-color: #818181;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const RequestPartner = styled.div`
-  margin-top: 16px;
-  width: 183px;
-  height: 39px;
-  border-radius: 20px;
-  border: solid 3px #818181;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-`
-
-const AllLinks = styled.div`
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-  @media (min-width: ${borderWeb}px) {
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const EachLink = styled.span`
-  color: #666666;
-  margin-top: 4px;
-  @media (min-width: ${borderWeb}px) { 
-    margin-top: 10px;
-    color: #cccccc;
-    fontWeight: 100;
-    fontSize: 13px;
-    display: flex;
-    align-items: center;
-  }
-`
-
-const MobilePage0Container = styled.div`
-  position: absolute;
-  top: 12.3vh;
-  bottom: 5.8vh;
-  left: 6.1vw;
-  right: 6.1vw;
-  width: 87.7vw;
-  height: 81.9vh;
-  opacity: 0.8;
-  border-radius: 8px;
-  background-color: #ffffff;
-  @media (min-width: ${borderWeb}px) {
-    display: none;
-  }  
-`
-
-const MobilePage0ContentsContainer = styled.div`
-  position: absolute;
-  top: 13.5vh;
-  bottom: 13.5vh;
-  left: 11.5vw;
-  right: 11.5vw;
-  width: 77vw;
-  height: 77.9vh;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @media (min-width: ${borderWeb}px) {
-    display: none;
-  }  
-`
-
-const MobilePage2Container = styled.div`
-  position: absolute;
-  top: 25.8vh;
-  bottom: 19.3vh;
-  left: 6.1vw;
-  right: 6.1vw;
-  width: 87.7vw;
-  height: 54.9vh;
-  opacity: 0.8;
-  border-radius: 8px;
-  background-color: #ffffff;
-  @media (min-width: ${borderWeb}px) {
-    display: none;
-  }  
-`
-
-const MobilePage2ContentsContainer = styled.div`
-  position: absolute;
-  top: 28.4vh;
-  bottom: 24.1vh;
-  left: 11.5vw;
-  right: 11.5vw;
-  width: 77vw;
-  height: 47.5vh;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  
-  @media (min-width: ${borderWeb}px) {
-    display: none;
-  }  
 `
 
 class Main extends React.Component {
@@ -1326,47 +1164,46 @@ class Main extends React.Component {
 <div className={classes.container + " "} >
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back2}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
-    <Page2ContentsContainer>
-      <Page2Copy>
+    <div className={classes.page2ContentsContainer}>
+      <span className={classes.page2Copy}>
         e스포츠 유저 데이터
-      </Page2Copy>
-      <Page2Copy>
+      </span>
+      <span className={classes.page2Copy}>
         분석 알고리즘
-      </Page2Copy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
           <img src="./img/common/icon1.png"/>
         </span>게이머의 통합 게임 데이터 확보 및 패턴 관리
-      </Page2SubCopy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
           <img src="./img/common/icon2.png"/>
         </span>각 게이머에게 맞춤형 팀과 대회 추천
-      </Page2SubCopy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
           <img src="./img/common/icon3.png"/>
         </span>광고주에게 맞춤형 타게팅 서비스 제공
-      </Page2SubCopy>      
-    </Page2ContentsContainer>    
+      </span>      
+    </div>
 
-    <MobilePage2Container>
-    </MobilePage2Container>
+    <div className={classes.mobilePage2Container}></div>
 
-    <MobilePage2ContentsContainer>
-      <Page2Copy>
+    <div className={classes.mobilePage2ContentsContainer}>
+      <span className={classes.page2Copy}>
         e스포츠 유저 데이터
-      </Page2Copy>
-      <Page2Copy>
+      </span>
+      <span className={classes.page2Copy}>
         분석 알고리즘
-      </Page2Copy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
@@ -1375,64 +1212,64 @@ class Main extends React.Component {
         <span style={{
         }}>게이머의 통합 게임 데이터 확보 및 패턴 관리
         </span>
-      </Page2SubCopy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
           <img src="./img_m/common/icon2.png"/>
         </span>각 게이머에게 맞춤형 팀과 대회 추천
-      </Page2SubCopy>
-      <Page2SubCopy>
+      </span>
+      <span className={classes.page2SubCopy}>
         <span style={{
           marginRight: "16px"
         }}>
           <img src="./img_m/common/icon3.png"/>
         </span>광고주에게 맞춤형 타게팅 서비스 제공
-      </Page2SubCopy>            
-    </MobilePage2ContentsContainer>
+      </span>            
+    </div>
 	</div>
 </div>
 
 <div className={classes.container + " "} >
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back3}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
-    <Page1CopyBox>
-      <Page1Copy>
+    <div className={classes.page1CopyBox}>
+      <span className={classes.page1Copy}>
         팀퀵으로
-      </Page1Copy>
+      </span>
       <br />
-      <Page1Copy>
+      <span className={classes.page1Copy}>
         게임을 한다는 것은
-      </Page1Copy>      
-    </Page1CopyBox>
+      </span>
+    </div>
 
-    <Page1SubCopyBox>
-      <Page1SubCopy>
+    <div className={classes.page1SubCopyBox}>
+      <span className={classes.page1SubCopy}>
         Anyone
-      </Page1SubCopy>
-      <Page1SubSubCopy>
+      </span>
+      <span className={classes.page1SubSubCopy}>
         누구나 대회에 참여하고 선수가 될 수 있어요
-      </Page1SubSubCopy>
-    </Page1SubCopyBox>
+      </span>
+    </div>
 
-    <Page1SubCopyBox2>
-      <Page1SubCopy>
+    <div className={classes.page1SubCopyBox2}>
+      <span className={classes.page1SubCopy}>
         Different
-      </Page1SubCopy>
-      <Page1SubSubCopy>
+      </span>
+      <span className={classes.page1SubSubCopy}>
         새롭고 다양한 대회 컨텐츠들이 언제나 있어요
-      </Page1SubSubCopy>
-    </Page1SubCopyBox2> 
+      </span>
+    </div>
 
-    <Page1SubCopyBox3>
-      <Page1SubCopy>
+    <div className={classes.page1SubCopyBox3}>
+      <span className={classes.page1SubCopy}>
         Profitable
-      </Page1SubCopy>
-      <Page1SubSubCopy>
+      </span>
+      <span className={classes.page1SubSubCopy}>
       좋아하는 게임을 하면서 상금을 받을 수 있어요
-      </Page1SubSubCopy>
-    </Page1SubCopyBox3> 
+      </span>
+    </div>
 
     <a href="mailto:help@teamquick.gg">
     <Page1Contact>
@@ -1507,15 +1344,15 @@ class Main extends React.Component {
 <div className={classes.container + " "} >
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back4}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
-    <Page1CopyBox>
-      <Page1Copy>
+    <div className={classes.page1CopyBox}>
+      <div className={classes.page1Copy}>
         팀퀵으로
-      </Page1Copy>
+      </div>
       <br/>
-      <Page1Copy>
+      <div className={classes.page1Copy}>
         게임을 만든다는 것은
-      </Page1Copy>      
-    </Page1CopyBox>
+      </div>
+    </div>
 
     <Page2SubCopyBox>
       <Page1SubCopy>
