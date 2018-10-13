@@ -80,6 +80,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     //`gatsby-plugin-jss`,
     `gatsby-plugin-offline`,
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
