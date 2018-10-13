@@ -33,6 +33,7 @@
     "generate-manifest-icons": "yarn favIcon16 && yarn favIcon32 && yarn favIcon96 && yarn icon512 && yarn icon384 && yarn icon256 && yarn icon192 && yarn icon144 && yarn icon96 && yarn icon48 && yarn appleIcon180 && yarn appleIcon152 && yarn appleIcon144 && yarn appleIcon120 && yarn appleIcon114 && yarn appleIcon76 && yarn appleIcon72 && yarn appleIcon60 && yarn appleIcon57"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.1.2",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.17.0",
     "eslint-config-google": "^0.9.1",
