@@ -539,7 +539,12 @@ const RowContainer = styled.div`
 const Page1CopyBox = styled.div`
   position: absolute;
   top: 18.6vh;
-  left: 10.6vw;
+  left: 6.1vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 18.6vh;
+    left: 10.6vw;
+  }
 `
 
 const Page1Copy = styled.span`
@@ -561,7 +566,7 @@ const Page1Copy = styled.span`
 const Page1SubCopyBox = styled.div`
   position: absolute;
   top: 36.9vh;
-  left: 10.6vw;
+  left: 6.1vw;
   @media (min-width: ${borderWeb}px) {
     position: absolute;
     top: 36.9vh;
@@ -572,7 +577,7 @@ const Page1SubCopyBox = styled.div`
 const Page1SubCopyBox2 = styled.div`
   position: absolute;
   top: 44vh;
-  left: 10.6vw;
+  left: 6.1vw;
   @media (min-width: ${borderWeb}px) {
     position: absolute;
     top: 50.8vh;
@@ -583,7 +588,7 @@ const Page1SubCopyBox2 = styled.div`
 const Page1SubCopyBox3 = styled.div`
   position: absolute;
   top: 51vh;
-  left: 10.6vw;
+  left: 6.1vw;
   @media (min-width: ${borderWeb}px) {
     position: absolute;
     top: 64.6vh;
@@ -609,6 +614,7 @@ const Page1SubCopy = styled.span`
 `
 
 const Page1SubSubCopy = styled.span`
+  font-size: 14px;
   display: block;
   font-weight: 100;
   color: #ffffff;
@@ -1317,7 +1323,7 @@ class Main extends React.Component {
         Easy
       </Page1SubCopy>
       <Page1SubSubCopy>
-        포스터 제작, 대진표 작성, 대회 진행, 게임 중계까지..
+        포스터 제작, 대진표 작성, 대회 진행, 게임 중계까지
       </Page1SubSubCopy>
       <Page1SubSubCopy>
         앱 하나로 손 쉽게
