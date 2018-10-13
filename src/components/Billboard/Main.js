@@ -596,6 +596,39 @@ const Page1SubCopyBox3 = styled.div`
   }
 `
 
+const Page2SubCopyBox = styled.div`
+  position: absolute;
+  top: 36.9vh;
+  left: 6.1vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 36.9vh;
+    left: 10.6vw;
+  }
+`
+
+const Page2SubCopyBox2 = styled.div`
+  position: absolute;
+  top: 50vh;
+  left: 6.1vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 50.8vh;
+    left: 10.6vw;
+  }
+`
+
+const Page2SubCopyBox3 = styled.div`
+  position: absolute;
+  top: 63vh;
+  left: 6.1vw;
+  @media (min-width: ${borderWeb}px) {
+    position: absolute;
+    top: 64.6vh;
+    left: 10.6vw;
+  }
+`
+
 const Page1SubCopy = styled.span`
   display: none;
   @media (min-width: ${borderWeb}px) {
@@ -1318,7 +1351,7 @@ class Main extends React.Component {
       </Page1Copy>      
     </Page1CopyBox>
 
-    <Page1SubCopyBox>
+    <Page2SubCopyBox>
       <Page1SubCopy>
         Easy
       </Page1SubCopy>
@@ -1328,9 +1361,9 @@ class Main extends React.Component {
       <Page1SubSubCopy>
         앱 하나로 손 쉽게
       </Page1SubSubCopy>      
-    </Page1SubCopyBox>
+    </Page2SubCopyBox>
 
-    <Page1SubCopyBox2>
+    <Page2SubCopyBox2>
       <Page1SubCopy>
         Different
       </Page1SubCopy>
@@ -1340,9 +1373,9 @@ class Main extends React.Component {
       <Page1SubSubCopy>
         더 즐겁게 게임을 할 수 있어요
       </Page1SubSubCopy>      
-    </Page1SubCopyBox2> 
+    </Page2SubCopyBox2> 
 
-    <Page1SubCopyBox3>
+    <Page2SubCopyBox3>
       <Page1SubCopy>
         Popularize
       </Page1SubCopy>
@@ -1352,7 +1385,7 @@ class Main extends React.Component {
       <Page1SubSubCopy>
       당신의 대회와 게임 콘텐츠를 알릴 수 있어요
       </Page1SubSubCopy>      
-    </Page1SubCopyBox3>     
+    </Page2SubCopyBox3>     
 
     <PartnerContainer>
       <BusinessButton>
