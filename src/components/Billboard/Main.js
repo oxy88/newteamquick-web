@@ -165,13 +165,13 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/back1.png\")",
+    "backgroundImage": "url(\"../img_m/common/back1_50.jpg\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
     "backgroundPosition": "center",
     [`@media (min-width: ${borderWeb}px)`]: {
-    "backgroundImage": "url(\"../img/common/back1.jpg\")",
+    "backgroundImage": "url(\"../img/common/back1_50.jpg\")",
     "backgroundSize": "cover",
     }
   },
@@ -179,13 +179,13 @@ const styles = theme => ({
     "height": "100%",
     "position": "relative",
     backgroundColor: "#ffffff",
-    "backgroundImage": "url(\"../img_m/common/back2.png\")",
+    "backgroundImage": "url(\"../img_m/common/back2_50.jpg\")",
     backgroundPosition: "50vw 50vh",
     backgroundSize: "100vw 100vh",
     backgroundRepeat: "no-repeat",
     "backgroundPosition": "center",
     [`@media (min-width: ${borderWeb}px)`]: {
-    "backgroundImage": "url(\"../img/common/back2.jpg\")",
+    "backgroundImage": "url(\"../img/common/back2_50.jpg\")",
     "backgroundSize": "cover",
     }
   },
