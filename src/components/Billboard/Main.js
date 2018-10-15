@@ -2,6 +2,7 @@ import React from 'react'
 import injectSheet from "react-jss";
 import Link from 'gatsby-link'
 import styled, { injectGlobal } from "styled-components"
+import ReactPageScroller from 'react-page-scroller'
 
 const borderWeb = 991
 const borderSmallMobile = 364
@@ -947,10 +948,32 @@ class Main extends React.Component {
       active2: {
         first: true,
         second: false,
-      }
+      },
+      currentPage: 1,
     }
     this.changeAppScreen = this.changeAppScreen.bind(this)
+    this._pageScroller = null
   }
+
+  goToPage = (eventKey) => {
+    this._pageScroller.goToPage(eventKey)
+  }
+
+  pageOnChange = (number) => {
+    this.setState({ currentPage: number })
+  }
+
+  // getPagesNumbers = () => {
+  //   const pageNumbers = [];
+
+  //   for (let i = 1; i <= 4; i++) {
+  //       pageNumbers.push(
+  //           <Pager.Item key={i} eventKey={i - 1} onSelect={this.goToPage}>{i}</Pager.Item>
+  //       )
+  //   }
+
+  //   return [...pageNumbers];    
+  // }
 
   componentWillMount() {
 
@@ -990,8 +1013,16 @@ class Main extends React.Component {
       appDownLoadUrl = "https://itunes.apple.com/kr/app/teamquick-%ED%8C%80%ED%80%B5-%EB%A1%A4-%EB%93%80%EC%98%A4-%EA%B2%A9%EC%A0%84-%ED%8C%80-%EC%B0%BE%EA%B8%B0/id1403184041"
     }
 
+    // const pagesNumbers = this.getPagesNumbers()
+
     return (
 <div className="wrap">
+
+<ReactPageScroller 
+  ref={c => this._pageScroller = c} 
+  pageOnChange={this.pageOnChange}
+  animationTimer={800}
+>
 
 <div className={classes.container} >
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back1}>
@@ -1242,7 +1273,7 @@ class Main extends React.Component {
       <span className={classes.page1Copy}>
         게임을 한다는 것은
       </span>
-    </div>
+    </div>    
 
     <div className={classes.page1SubCopyBox}>
       <span className={classes.page1SubCopy}>
@@ -1345,12 +1376,13 @@ class Main extends React.Component {
 	<div className={classes.content + " " + classes.cover__content + " " + classes.back4}>
 		<div className={classes.logo}><a href="#"><img src="./img/common/newLogo.png" /></a></div>
     <div className={classes.page1CopyBox}>
-      <div className={classes.page1Copy}>
+      <span className={classes.page1Copy}>
         팀퀵으로
-      </div>
-      <div className={classes.page1Copy}>
+      </span>
+      <br />
+      <span className={classes.page1Copy}>
         게임을 만든다는 것은
-      </div>
+      </span>
     </div>
 
     <Page2SubCopyBox>
@@ -1432,7 +1464,12 @@ class Main extends React.Component {
 	</div>
 </div>
 
-<div className={classes.footer}>
+</ReactPageScroller>
+{/* <Pager className="pagination-additional-class" bsSize="large">
+  {pagesNumbers}
+</Pager> */}
+
+{/* <div className={classes.footer}> */}
 		{/* <div className={classes.footer__top_area}>
 			<div className={classes.footer__top_area__sitemap_box}>
 				<span className={classes.footer__title + " " + classes.footer_a}>안내</span>
@@ -1472,19 +1509,19 @@ class Main extends React.Component {
 			</div>
 		</div> */}
 		
-		<div className={classes.footer__bottom_area}>
-			{/* <div className="footer_logo"><img src="./img/common/icon.png" /></div> */}
+		{/* <div className={classes.footer__bottom_area}>
+			<div className="footer_logo"><img src="./img/common/icon.png" /></div>
 			<div className={classes.footer__bottom_area__footer_text}>ⓒ  2018 TeamQuick</div>
 			<div className={classes.footer__bottom_area__footer_text}>
 				팀퀵 | 사업자 등록번호 : 471-13-00857 | 대표 : 옥성진<br />
 				경기도 안산시 단원구 연수원로 87, 104호(원곡동, 창의관)<br />문의 : <a className={classes.underline} href="mailto:help@teamquick.gg">help@teamquick.gg</a>
 			</div>
 			<div className={classes.footer__bottom_area__footer_text}>
-				{/* <a href="#">이용약관</a>&nbsp; |&nbsp; */}
+				<a href="#">이용약관</a>&nbsp; |&nbsp;
 				<a href="privacy">개인정보 처리방침</a>
 			</div>
 		</div>
-</div>
+</div> */}
 
 
 </div>
