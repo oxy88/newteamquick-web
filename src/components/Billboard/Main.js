@@ -83,7 +83,8 @@ const styles = theme => ({
     "height": "100%"
   },
   "body": {
-    "height": "100%"
+    "height": "100%",
+    "overscroll-behavior-y": "contain"
   },
   "wrap": {
     "width": "100%",
