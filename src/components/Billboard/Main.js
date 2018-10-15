@@ -496,7 +496,7 @@ const styles = theme => ({
     [`@media (min-width: ${borderWeb}px)`]: {
       display: "inline",
       fontSize: "40px",
-      lineHeight: 1.35,
+      // lineHeight: 1.35,
       color: "#ffffff" 
     }
   },
@@ -721,7 +721,7 @@ const styles = theme => ({
   },
   page1SubCopyBox2: {
     position: "absolute",
-    top: "50vh",
+    top: "44vh",
     left: "6.1vw",
     [`@media (min-width: ${borderWeb}px)`]: { 
       position: "absolute",
@@ -731,7 +731,7 @@ const styles = theme => ({
   },
   page1SubCopyBox3: {
     position: "absolute",
-    top: "63vh",
+    top: "51vh",
     left: "6.1vw",
     [`@media (min-width: ${borderWeb}px)`]: { 
       position: "absolute",
@@ -1348,7 +1348,6 @@ class Main extends React.Component {
       <div className={classes.page1Copy}>
         팀퀵으로
       </div>
-      <br/>
       <div className={classes.page1Copy}>
         게임을 만든다는 것은
       </div>
