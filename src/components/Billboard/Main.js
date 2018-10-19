@@ -1082,23 +1082,23 @@ class Main extends React.Component {
               <img src="./img/common/twitch.png" />
             </span>트위치 페이지</span>
         </a>
-        <a href="mailto:business@teamquick.gg" target="_blank" >        
+        <a href="mailto:biz@teamquick.gg" target="_blank" >        
           <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
-            </span>제휴 문의 : business@teamquick.gg</span>
+            </span>제휴 문의 : biz@teamquick.gg</span>
         </a>
-        <a href="mailto:help@teamquick.gg" target="_blank" >        
+        <a href="mailto:cs@teamquick.gg" target="_blank" >        
           <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
               marginTop: "-3px"
             }}>
               <img src="./img/common/mail.png" />
-            </span>고객 문의 : help@teamquick.gg</span>
+            </span>고객 문의 : cs@teamquick.gg</span>
         </a>
         <a href="" target="_blank" >        
           <span className={classes.eachLink}>
@@ -1164,21 +1164,21 @@ class Main extends React.Component {
               <img src="./img/common/twitch.png" />
             </span>트위치 페이지</span>
         </a>
-        <a style={{ marginTop: "12px"}} href="mailto:business@teamquick.gg" target="_blank" >        
+        <a style={{ marginTop: "12px"}} href="mailto:biz@teamquick.gg" target="_blank" >        
           <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
-            </span>제휴 문의 : business@teamquick.gg</span>
+            </span>제휴 문의 : biz@teamquick.gg</span>
         </a>
-        <a style={{ marginTop: "12px"}} href="mailto:helpn@teamquick.gg" target="_blank" >        
+        <a style={{ marginTop: "12px"}} href="mailto:cs@teamquick.gg" target="_blank" >        
           <span className={classes.eachLink}>
             <span style={{
               marginRight: '12px',
             }}>
               <img src="./img/common/mail.png" />
-            </span>고객 문의 : help@teamquick.gg</span>
+            </span>고객 문의 : cs@teamquick.gg</span>
         </a>
         <a style={{ marginTop: "12px"}} href="" target="_blank" >        
           <span className={classes.eachLink}>
@@ -1303,7 +1303,7 @@ class Main extends React.Component {
       </span>
     </div>
 
-    <a href="mailto:help@teamquick.gg">
+    <a href="mailto:cs@teamquick.gg">
     <Page1Contact>
       <span style={{
         color: "#ffffff",
@@ -1314,7 +1314,7 @@ class Main extends React.Component {
         color: "#999999",
         fontSize: "13px",
         fontWeight: 100
-      }}>&nbsp;(help@teamquick.gg)</span>
+      }}>&nbsp;(cs@teamquick.gg)</span>
     </Page1Contact> 
     </a>
 
@@ -1356,7 +1356,7 @@ class Main extends React.Component {
         <SocialLink>Facebook</SocialLink>
       </SocialButton>      
       </a>
-      <a href="mailto:help@teamquick.gg">
+      <a href="mailto:cs@teamquick.gg">
       <MobilePage1Contact>
         <span style={{
           color: "#58595b",
@@ -1367,7 +1367,7 @@ class Main extends React.Component {
           color: "#999999",
           fontSize: "13px",
           fontWeight: 100
-        }}>&nbsp;(help@teamquick.gg)</span>
+        }}>&nbsp;(cs@teamquick.gg)</span>
     </MobilePage1Contact>       
     </a>
     </MobileSocialContainer>
